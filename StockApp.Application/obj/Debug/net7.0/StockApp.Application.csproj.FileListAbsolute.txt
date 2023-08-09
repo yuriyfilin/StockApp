@@ -1,0 +1,15 @@
+/Users/yuriyfilin/source/test/StockApp/StockApp.Application/bin/Debug/net7.0/StockApp.Application.deps.json
+/Users/yuriyfilin/source/test/StockApp/StockApp.Application/bin/Debug/net7.0/StockApp.Application.dll
+/Users/yuriyfilin/source/test/StockApp/StockApp.Application/bin/Debug/net7.0/StockApp.Application.pdb
+/Users/yuriyfilin/source/test/StockApp/StockApp.Application/bin/Debug/net7.0/StockApp.Domain.dll
+/Users/yuriyfilin/source/test/StockApp/StockApp.Application/bin/Debug/net7.0/StockApp.Domain.pdb
+/Users/yuriyfilin/source/test/StockApp/StockApp.Application/obj/Debug/net7.0/StockApp.Application.csproj.AssemblyReference.cache
+/Users/yuriyfilin/source/test/StockApp/StockApp.Application/obj/Debug/net7.0/StockApp.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yuriyfilin/source/test/StockApp/StockApp.Application/obj/Debug/net7.0/StockApp.Application.AssemblyInfoInputs.cache
+/Users/yuriyfilin/source/test/StockApp/StockApp.Application/obj/Debug/net7.0/StockApp.Application.AssemblyInfo.cs
+/Users/yuriyfilin/source/test/StockApp/StockApp.Application/obj/Debug/net7.0/StockApp.Application.csproj.CoreCompileInputs.cache
+/Users/yuriyfilin/source/test/StockApp/StockApp.Application/obj/Debug/net7.0/StockApp.Application.csproj.CopyComplete
+/Users/yuriyfilin/source/test/StockApp/StockApp.Application/obj/Debug/net7.0/StockApp.Application.dll
+/Users/yuriyfilin/source/test/StockApp/StockApp.Application/obj/Debug/net7.0/refint/StockApp.Application.dll
+/Users/yuriyfilin/source/test/StockApp/StockApp.Application/obj/Debug/net7.0/StockApp.Application.pdb
+/Users/yuriyfilin/source/test/StockApp/StockApp.Application/obj/Debug/net7.0/ref/StockApp.Application.dll

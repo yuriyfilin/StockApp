@@ -1,0 +1,52 @@
+<h1>Остатки товаров</h1>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Общая сумма закупки: {{purchaseSum}}</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h2>Общая сумма продажи: {{sellingSum}}</h2>
+    </div>
+  </div>
+</div>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Наименование</th>
+    <th scope="col">Артикул</th>
+    <th scope="col">Цена закупки</th>
+    <th scope="col">Цена продажи</th>
+    <th scope="col">Единицы измерения</th>
+    <th scope="col">Количество</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let good of goods; index as i">
+    <th scope="row">{{ good.id }}</th>
+    <td>{{ good.name }}</td>
+    <td>{{ good.vendorCode}}</td>
+    <td>{{ good.purchasePrice | number }}</td>
+    <td>{{ good.sellingPrice | number }}</td>
+    <td>{{ good.units}}</td>
+    <td>{{ good.count | number }}</td>
+  </tr>
+  </tbody>
+</table>
+<div class="d-flex justify-content-between p-2">
+  <ngb-pagination
+    [collectionSize]="total"
+    [(page)]="page"
+    [pageSize]="count"
+    (pageChange)="loadData()"
+  >
+  </ngb-pagination>
+
+  <select class="form-select" style="width: auto" [(ngModel)]="count" (ngModelChange)="loadData()">
+    <option [ngValue]="10">10</option>
+    <option [ngValue]="30">30</option>
+    <option [ngValue]="60">60</option>
+  </select>
+</div>

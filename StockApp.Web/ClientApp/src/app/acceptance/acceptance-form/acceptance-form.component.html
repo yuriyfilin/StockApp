@@ -1,0 +1,32 @@
+<div class="modal-header">
+  <h4 class="modal-title">Создание приемки</h4>
+  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss()"></button>
+</div>
+<div class="modal-body">
+  <h1>Товары</h1>
+  <button type="button" class="btn btn-primary" (click)="addGood()">Добавить товар в приемку</button>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">ID товара</th>
+      <th scope="col">Наименование товара</th>
+      <th scope="col">Количество</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let acceptanceGood of acceptanceGoods; index as i">
+      <th scope="row">{{ acceptanceGood.goodId }}</th>
+      <td>{{ acceptanceGood.name }}</td>
+      <td>{{ acceptanceGood.count | number }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div class="modal-footer">
+  <div class="col-12">
+    <button class="btn btn-primary" (click)="create()">Создать</button>
+    <button type="button" class="btn btn-dark" (click)="activeModal.close()">Закрыть</button>
+  </div>
+
+</div>

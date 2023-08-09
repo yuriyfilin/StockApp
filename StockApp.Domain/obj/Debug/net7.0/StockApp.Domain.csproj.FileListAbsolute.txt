@@ -1,0 +1,12 @@
+/Users/yuriyfilin/source/test/StockApp/StockApp.Domain/bin/Debug/net7.0/StockApp.Domain.deps.json
+/Users/yuriyfilin/source/test/StockApp/StockApp.Domain/bin/Debug/net7.0/StockApp.Domain.dll
+/Users/yuriyfilin/source/test/StockApp/StockApp.Domain/bin/Debug/net7.0/StockApp.Domain.pdb
+/Users/yuriyfilin/source/test/StockApp/StockApp.Domain/obj/Debug/net7.0/StockApp.Domain.csproj.AssemblyReference.cache
+/Users/yuriyfilin/source/test/StockApp/StockApp.Domain/obj/Debug/net7.0/StockApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yuriyfilin/source/test/StockApp/StockApp.Domain/obj/Debug/net7.0/StockApp.Domain.AssemblyInfoInputs.cache
+/Users/yuriyfilin/source/test/StockApp/StockApp.Domain/obj/Debug/net7.0/StockApp.Domain.AssemblyInfo.cs
+/Users/yuriyfilin/source/test/StockApp/StockApp.Domain/obj/Debug/net7.0/StockApp.Domain.csproj.CoreCompileInputs.cache
+/Users/yuriyfilin/source/test/StockApp/StockApp.Domain/obj/Debug/net7.0/StockApp.Domain.dll
+/Users/yuriyfilin/source/test/StockApp/StockApp.Domain/obj/Debug/net7.0/refint/StockApp.Domain.dll
+/Users/yuriyfilin/source/test/StockApp/StockApp.Domain/obj/Debug/net7.0/StockApp.Domain.pdb
+/Users/yuriyfilin/source/test/StockApp/StockApp.Domain/obj/Debug/net7.0/ref/StockApp.Domain.dll

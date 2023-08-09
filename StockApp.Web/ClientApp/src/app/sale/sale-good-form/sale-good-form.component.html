@@ -1,0 +1,47 @@
+<div class="modal-header">
+  <h4 class="modal-title">Добавление товара</h4>
+  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss()"></button>
+</div>
+<div class="modal-body">
+  <form [formGroup]="form"  class="row g-3">
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <label for="good">Товар:</label>
+          <select class="form-select form-select-lg mb-2"
+                  aria-label="Small select"
+                  formControlName="good"
+                  id="good"
+                  required
+                  [ngClass]="{ 'is-invalid': f.good.touched && f.good.errors, 'is-valid': f.good.valid }">
+            <ng-container *ngFor="let good of goods">
+              <option [ngValue]="good">{{good.name}}</option>
+            </ng-container>
+          </select>
+          <div *ngIf="f.good.touched && f.good.errors" class="invalid-feedback">
+            <div *ngIf="f.good.errors.required">Поле обязательно для заполнения!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <label for="count">Количество:</label>
+          <input type="text" formControlName="count" id="count" class="form-control" placeholder="Количество" required [ngClass]="{ 'is-invalid': f.count.touched && f.count.errors, 'is-valid': f.count.valid }">
+          <div *ngIf="f.count.touched && f.count.errors" class="invalid-feedback">
+            <div *ngIf="f.count.errors.required">Поле обязательно для заполнения!</div>
+            <div *ngIf="f.count.errors.pattern">Поле поддерживает только целочисленые значения!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <div class="col-12">
+    <button class="btn btn-primary" [disabled]="form.invalid"  (click)="add()">Добавить</button>
+    <button type="button" class="btn btn-dark" (click)="activeModal.close()">Закрыть</button>
+  </div>
+
+</div>

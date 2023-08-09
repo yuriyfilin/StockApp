@@ -1,0 +1,36 @@
+<h1>Приемки</h1>
+<button type="button" class="btn btn-primary" (click)="create()">Принять товары</button>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Товары</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let acceptance of acceptances; index as i">
+    <th scope="row">{{ acceptance.id }}</th>
+    <td>
+      <ng-container *ngFor="let good of acceptance.goods">
+        <div>{{good.name}} в кол-ве {{good.count | number}} {{good.units}}</div>
+      </ng-container>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<div class="d-flex justify-content-between p-2">
+  <ngb-pagination
+    [collectionSize]="total"
+    [(page)]="page"
+    [pageSize]="count"
+    (pageChange)="loadData()"
+  >
+  </ngb-pagination>
+
+  <select class="form-select" style="width: auto" [(ngModel)]="count" (ngModelChange)="loadData()">
+    <option [ngValue]="10">10</option>
+    <option [ngValue]="30">30</option>
+    <option [ngValue]="60">60</option>
+  </select>
+</div>

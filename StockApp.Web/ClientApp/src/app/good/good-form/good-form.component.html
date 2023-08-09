@@ -1,0 +1,76 @@
+<div class="modal-header">
+  <h4 class="modal-title">Создание товара</h4>
+  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+  <form [formGroup]="form"  class="row g-3">
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <label for="name">Наименование:</label>
+          <input type="text" formControlName="name" id="name" class="form-control" placeholder="Наименование" required [ngClass]="{ 'is-invalid': f.name.touched && f.name.errors, 'is-valid': f.name.valid }">
+          <div *ngIf="f.name.touched && f.name.errors" class="invalid-feedback">
+            <div *ngIf="f.name.errors.required">Поле обязательно для заполнения!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <label for="vendorCode">Артикул:</label>
+          <input type="text" formControlName="vendorCode" id="vendorCode" class="form-control" placeholder="Артикул" required [ngClass]="{ 'is-invalid': f.vendorCode.touched && f.vendorCode.errors, 'is-valid': f.vendorCode.valid }">
+          <div *ngIf="f.vendorCode.touched && f.vendorCode.errors" class="invalid-feedback">
+            <div *ngIf="f.vendorCode.errors.required">Поле обязательно для заполнения!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <label for="purchasePrice">Цена закупки:</label>
+          <input type="text" formControlName="purchasePrice" id="purchasePrice" class="form-control" placeholder="Цена закупки" required [ngClass]="{ 'is-invalid': f.purchasePrice.touched && f.purchasePrice.errors, 'is-valid': f.purchasePrice.valid }">
+          <div *ngIf="f.purchasePrice.touched && f.purchasePrice.errors" class="invalid-feedback">
+            <div *ngIf="f.purchasePrice.errors.required">Поле обязательно для заполнения!</div>
+            <div *ngIf="f.purchasePrice .errors.pattern">Поле поддерживает целочисленые и дробные значения!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <label for="sellingPrice">Цена продажи:</label>
+          <input type="text" formControlName="sellingPrice" id="sellingPrice" class="form-control" placeholder="Цена продажи" required [ngClass]="{ 'is-invalid': f.sellingPrice.touched && f.sellingPrice.errors, 'is-valid': f.sellingPrice.valid }">
+          <div *ngIf="f.sellingPrice.touched && f.sellingPrice.errors" class="invalid-feedback">
+            <div *ngIf="f.sellingPrice.errors.required">Поле обязательно для заполнения!</div>
+            <div *ngIf="f.sellingPrice.errors.pattern">Поле поддерживает целочисленые и дробные значения!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <label for="units">Единицы измерения:</label>
+          <select class="form-select form-select-lg mb-2" aria-label="Small select" formControlName="units" id="units" required [ngClass]="{ 'is-invalid': f.units.touched && f.units.errors, 'is-valid': f.units.valid }">
+            <ng-container *ngFor="let unit of units">
+              <option value="{{unit.id}}">{{unit.value}}</option>
+            </ng-container>
+          </select>
+          <div *ngIf="f.units.touched && f.units.errors" class="invalid-feedback">
+            <div *ngIf="f.units.errors.required">Поле обязательно для заполнения!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <div class="col-12">
+    <button class="btn btn-primary" [disabled]="form.invalid"  (click)="create()">Создать</button>
+    <button type="button" class="btn btn-dark" (click)="activeModal.close('Close click')">Закрыть</button>
+  </div>
+
+</div>
